@@ -7,6 +7,13 @@ import backseat from "../view/Bus/backseat";
 import userinfo from "../view/Base/userinfo";
 import roleinfo from "../view/Base/roleinfo";
 import welcome from "../view/WelCome/welcome";
+import workstash from "../view/MainLoad/WorkStash";
+import Authpage from  "../view/EorrorPages/401";
+import Nopage from  "../view/EorrorPages/404";
+import servererrorpage from  "../view/EorrorPages/500";
+import page1 from '../pages/page1'
+import page2 from '../pages/page2'
+
 
 Vue.use(Router)
 
@@ -34,6 +41,11 @@ export default new Router({
           }
         },
         {
+          path: '/index/workstash',
+          name: 'workstash',
+          component: workstash
+        },
+        {
           path: '/index/backseat',
           name: 'backseat',
           component: backseat
@@ -47,6 +59,31 @@ export default new Router({
           path: '/index/roleinfo',
           name: 'roleinfo',
           component: roleinfo
+        },
+        {
+          path: '/index/Authpage',
+          name: 'Authpage',
+          component: Authpage
+        },
+        {
+          path: '/index/Nopage',
+          name: 'Nopage',
+          component: Nopage
+        },
+        {
+          path:"/index/servererrorpage",
+          name:"servererrorpage",
+          component: servererrorpage
+        },
+        {
+          path: '/page1',
+          name: 'page1',
+          component: page1
+        },
+        {
+          path: '/page2',
+          name: 'page2',
+          component: page2
         }
       ]
     }
